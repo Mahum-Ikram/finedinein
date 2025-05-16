@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Start of Zeacon Code -->
+  <script type="text/javascript" async="" id="zeacon-sdk"
+    src="https://licencetotest.com/sdk/correlator.js?api-key=c0988d6d-b45f-48f0-869a-54a4720eb41e"></script>
+  <!-- End of Zeacon Code -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Reserve Today</title>
@@ -29,7 +34,8 @@
       content: "";
       position: absolute;
       inset: 0;
-      background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+      background-color: rgba(0, 0, 0, 0.5);
+      /* dark overlay */
       z-index: 0;
     }
 
@@ -41,30 +47,30 @@
     .hero h1 {
       font-size: 4rem;
       font-weight: 700;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
     }
 
     .hero p {
       font-size: 1.5rem;
       font-weight: 500;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
     }
 
     .hero .btn-primary {
       padding-left: 2.5rem;
       padding-right: 2.5rem;
       font-weight: 600;
-      box-shadow: 0 5px 15px rgba(0,123,255,.4);
+      box-shadow: 0 5px 15px rgba(0, 123, 255, .4);
       transition: background-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .hero .btn-primary:hover {
       background-color: #0b5ed7;
-      box-shadow: 0 8px 20px rgba(11,94,215,0.6);
+      box-shadow: 0 8px 20px rgba(11, 94, 215, 0.6);
     }
 
     .hero img.behind-button {
-      
+
       opacity: 0.1;
       border-radius: 12px;
       width: 1200px;
@@ -85,7 +91,7 @@
 
     .card:hover {
       transform: translateY(-8px) scale(1.05);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
       z-index: 10;
     }
 
@@ -124,20 +130,25 @@
     }
 
     /* Fade-in animation on sections */
-    section, header {
+    section,
+    header {
       opacity: 0;
       transform: translateY(15px);
       animation: fadeInUp 0.8s forwards;
     }
+
     header {
       animation-delay: 0.2s;
     }
+
     #services {
       animation-delay: 0.4s;
     }
+
     #reservation {
       animation-delay: 0.6s;
     }
+
     #contact {
       animation-delay: 0.8s;
     }
@@ -150,144 +161,150 @@
     }
   </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold fs-3" href="#">Reserve Today</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-            aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav fs-5">
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#reservation">Reserve</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3" href="#">Reserve Today</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav fs-5">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reservation">Reserve</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Hero Section -->
-<header class="hero" id="home">
-  <div class="container text-center">
-    <h1>Book Your Perfect Table</h1>
-    <p>Reserve your spot at the finest restaurants</p>
-    <div class="position-relative d-inline-block mt-4">
-      <img src="https://thumbs.dreamstime.com/b/balanced-diet-food-background-balanced-diet-food-background-organic-food-healthy-nutrition-superfoods-meat-fish-legumes-nuts-121936796.jpg"
-           alt="Decorative behind button"
-           class="behind-button" />
-      <a href="#reservation" class="btn btn-primary btn-lg position-relative">Reserve Now</a>
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="container text-center">
+      <h1>Book Your Perfect Table</h1>
+      <p>Reserve your spot at the finest restaurants</p>
+      <div class="position-relative d-inline-block mt-4">
+        <img
+          src="https://thumbs.dreamstime.com/b/balanced-diet-food-background-balanced-diet-food-background-organic-food-healthy-nutrition-superfoods-meat-fish-legumes-nuts-121936796.jpg"
+          alt="Decorative behind button" class="behind-button" />
+        <a href="#reservation" class="btn btn-primary btn-lg position-relative">Reserve Now</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- Services Section -->
-<section id="services" class="py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2>Our Services</h2>
-      <p class="text-muted">We provide top-tier reservation experiences</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="https://xanders.pk/wp-content/uploads/sb-instagram-feed-images/496930457_710976504683809_9140984253440544825_nfull.jpg" class="card-img-top" alt="Fine Dining">
-          <div class="card-body">
-            <h5 class="card-title">Fine Dining</h5>
-            <p class="card-text">Reserve tables at luxury restaurants with ease.</p>
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Our Services</h2>
+        <p class="text-muted">We provide top-tier reservation experiences</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://xanders.pk/wp-content/uploads/sb-instagram-feed-images/496930457_710976504683809_9140984253440544825_nfull.jpg"
+              class="card-img-top" alt="Fine Dining">
+            <div class="card-body">
+              <h5 class="card-title">Fine Dining</h5>
+              <p class="card-text">Reserve tables at luxury restaurants with ease.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://xanders.pk/wp-content/uploads/2025/02/aboutus.png" class="card-img-top"
+              alt="Custom Reservations">
+            <div class="card-body">
+              <h5 class="card-title">Custom Reservations</h5>
+              <p class="card-text">Tailor your experience with seating, time, and cuisine preferences.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="https://xanders.pk/wp-content/uploads/2024/03/IMG_9382-scaled-1-1152x1536.jpg"
+              class="card-img-top" alt="Event Booking">
+            <div class="card-body">
+              <h5 class="card-title">Event Booking</h5>
+              <p class="card-text">Reserve for private events, birthdays, or corporate dinners.</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="https://xanders.pk/wp-content/uploads/2025/02/aboutus.png" class="card-img-top" alt="Custom Reservations">
-          <div class="card-body">
-            <h5 class="card-title">Custom Reservations</h5>
-            <p class="card-text">Tailor your experience with seating, time, and cuisine preferences.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <img src="https://xanders.pk/wp-content/uploads/2024/03/IMG_9382-scaled-1-1152x1536.jpg" class="card-img-top" alt="Event Booking">
-          <div class="card-body">
-            <h5 class="card-title">Event Booking</h5>
-            <p class="card-text">Reserve for private events, birthdays, or corporate dinners.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Reservation Section -->
-<section id="reservation" class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2>Make a Reservation</h2>
-      <p class="text-muted">Fill out the form and we’ll confirm your table</p>
-    </div>
-    <form>
-      <div class="row g-3">
-        <div class="col-md-6">
-          <div class="form-floating">
-            <input type="text" class="form-control" id="fullName" placeholder="Full Name" required />
-            <label for="fullName">Full Name</label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-floating">
-            <input type="email" class="form-control" id="email" placeholder="Email Address" required />
-            <label for="email">Email Address</label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-floating">
-            <input type="date" class="form-control" id="date" placeholder="Date" required />
-            <label for="date">Date</label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-floating">
-            <input type="time" class="form-control" id="time" placeholder="Time" required />
-            <label for="time">Time</label>
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="form-floating">
-            <textarea class="form-control" placeholder="Special Requests" id="requests" style="height: 100px;"></textarea>
-            <label for="requests">Special Requests</label>
-          </div>
-        </div>
-        <div class="col-12 text-center">
-          <button type="submit" class="btn btn-primary btn-lg px-5">Reserve Table</button>
-        </div>
+  <!-- Reservation Section -->
+  <section id="reservation" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Make a Reservation</h2>
+        <p class="text-muted">Fill out the form and we’ll confirm your table</p>
       </div>
-    </form>
-  </div>
-</section>
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="fullName" placeholder="Full Name" required />
+              <label for="fullName">Full Name</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="email" placeholder="Email Address" required />
+              <label for="email">Email Address</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="date" class="form-control" id="date" placeholder="Date" required />
+              <label for="date">Date</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-floating">
+              <input type="time" class="form-control" id="time" placeholder="Time" required />
+              <label for="time">Time</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-floating">
+              <textarea class="form-control" placeholder="Special Requests" id="requests"
+                style="height: 100px;"></textarea>
+              <label for="requests">Special Requests</label>
+            </div>
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary btn-lg px-5">Reserve Table</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-5">
-  <div class="container text-center">
-    <h2>Contact Us</h2>
-    <p class="text-muted mb-4">Have questions or need help? Reach out to our team!</p>
-    <p><strong>Email:</strong> <a href="mailto:contact@reservetoday.com">contact@reservetoday.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:+12345678900">+1 234 567 8900</a></p>
-  </div>
-</section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container text-center">
+      <h2>Contact Us</h2>
+      <p class="text-muted mb-4">Have questions or need help? Reach out to our team!</p>
+      <p><strong>Email:</strong> <a href="mailto:contact@reservetoday.com">contact@reservetoday.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+12345678900">+1 234 567 8900</a></p>
+    </div>
+  </section>
 
-<!-- Footer -->
-<footer class="text-center">
-  <div class="container">
-    <p class="mb-0">&copy; 2025 Reserve Today. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Reserve Today. All rights reserved.</p>
+    </div>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
